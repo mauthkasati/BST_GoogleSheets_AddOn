@@ -88,7 +88,7 @@ function loadDataIntoBST() {
   const bstJSON = JSON.stringify(bst);
 
   // Upload BST to Firebase
-  const firebaseUrl = 'https://<your-project-id>.firebaseio.com/bst.json';
+  const firebaseUrl = 'https://BST.firebaseio.com/bst.json';
   const options = {
     method: 'put',
     contentType: 'application/json',
@@ -106,7 +106,7 @@ function searchKeyword() {
   const ui = SpreadsheetApp.getUi();
 
   // Retrieve the BST from Firebase
-  const firebaseUrl = 'https://<your-project-id>.firebaseio.com/bst.json';
+  const firebaseUrl = 'https://BST.firebaseio.com/bst.json';
   const response = UrlFetchApp.fetch(firebaseUrl);
   const bstJSON = response.getContentText();
 
